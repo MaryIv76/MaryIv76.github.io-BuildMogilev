@@ -1,0 +1,76 @@
+// main: ../style.less
+
+.nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media @tablet {
+        display: none;
+        margin: -0.5rem 0 0;
+        padding: 1rem 0;
+        width: 100%;
+        height: auto;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        background-color: @white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        text-align: center;
+
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.nav__link {
+    margin-left: 3rem;
+    position: relative;
+
+    font-size: 1.4rem;
+    color: @gray-dark;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: color .2s linear;
+
+    &:after {
+        content: "";
+        width: 0;
+        height: 2px;
+        background-color: @orange;
+
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: 1;
+
+        transition: width .2s linear;
+    }
+
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+
+        color: @orange;
+    }
+
+    &.active {
+        &:after {
+            width: 100%;
+        }
+
+        color: @orange;
+    }
+
+    @media @tablet {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+    }
+}

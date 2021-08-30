@@ -1,0 +1,82 @@
+// main: ../style.less
+
+.card {
+    margin: 6rem -1.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media @tablet {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    @media @mobile {
+        margin-top: 30px;
+    }
+}
+
+.card__item {
+    width: 33.33333%;
+    padding: 0 15px;
+
+    @media @tablet {
+        width: 100%;
+        max-width: 410px;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.card__inner {
+    position: relative;
+    background-color: @vinous;
+}
+
+.card__item:hover .card__img {
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.card__item:hover .card__img img{
+    opacity: 0.1;
+}
+
+.card__item:hover .card__text {
+    opacity: 1;
+}
+
+.card__img {
+    background: linear-gradient(to bottom, #fac98e, #d36d56);
+
+    transition: transform .2s linear;
+}
+
+.card__img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    transition: opacity .2s linear;
+}
+
+.card__text {
+    width: 100%;
+
+    font-size: 1.8rem;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, -50%, 0);
+
+    transition: opacity .2s linear;
+}

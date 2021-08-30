@@ -1,0 +1,52 @@
+// main: ../style.less
+
+.social {
+    display: flex;
+}
+
+.social--footer {
+    justify-content: center;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    margin-right: .4rem;
+
+    background-color: transparent;
+    border: 1px solid @pink;
+
+    transition: background .1s linear;
+}
+
+.social__item:hover {
+    background-color: @pink;
+}
+
+.social__item:hover .social__icon {
+    fill: #fff;
+}
+
+.social--footer .social__item {
+    background-color: transparent;
+    border-width: 2px;
+    border-color: @gray;
+    border-radius: 2px;
+}
+
+.social--footer .social__item:hover {
+    background-color: @pink;
+}
+
+.social__icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    fill: @gray;
+
+    transition: fill .1s linear;
+}

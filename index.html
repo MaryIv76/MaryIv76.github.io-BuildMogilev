@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OтделКом</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Sprite -->
+    <svg style="display: none;">
+
+        <symbol id="instagram" viewBox="0 0 511 511.9">
+            <g>
+                <path
+                    d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
+                <path
+                    d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" />
+                <path
+                    d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
+            </g>
+        </symbol>
+
+    </svg>
+
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <img class="header__shape" id="headerShape" src="images/shape.png" alt="">
+
+                <div class="header__logo" data-scroll="#intro">
+                    <a href="#">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a class="nav__link" id="navAbout" href="#" data-scroll="#about">О нас</a>
+                    <a class="nav__link" id="navWorks" href="#" data-scroll="#works">Услуги</a>
+                    <a class="nav__link" id="navBenefits" href="#" data-scroll="#benefits">Преимущества</a>
+                    <a class="nav__link" id="navRequest" href="#" data-scroll="#request">Заказ</a>
+                    <a class="nav__link" id="navContacts" href="#" data-scroll="#contacts">Контакты</a>
+                </nav>
+
+                <button class="nav-toggle" id="nav_toggle" type="button">
+                    <span class="nav-toggle__item">Menu</span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Intro -->
+    <section class="intro" id="intro">
+        <div class="container">
+            <div class="intro__inner">
+
+                <h1 class="intro__title">ООО<br>"ОтделКом"</h1>
+                <h6 class="intro__addition">регистрационный номер 791258333 от 07.10.2020</h6>
+                <h2 class="intro__subtitle">Ремонтные и отделочные<br>работы</h2>
+
+                <a class="btn" href="#" data-scroll="#about">Узнать больше</a>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About & card -->
+    <section class="section" id="about">
+        <div class="container">
+
+            <div class="section__header">
+                <h2 class="section__title">Коротко о фирме</h2>
+                <div class="section__text">
+                    <p>Мы выполняем ремотные и отделочные работы объектов государственной и коммерческой недвижимости в
+                        Могилёве и по всей Беларуси.</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="images/about/fence.jpg" alt="">
+                        </div>
+                        <div class="card__text">Ремонт</div>
+                    </div>
+                </div>
+
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="images/about/building.jpg" alt="">
+                        </div>
+                        <div class="card__text">Строительство</div>
+                    </div>
+                </div>
+
+                <div class="card__item">
+                    <div class="card__inner">
+                        <div class="card__img">
+                            <img src="images/about/improvement.jpg" alt="">
+                        </div>
+                        <div class="card__text">Благоустройство</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Works -->
+    <div class="works" id="works">
+        <div class="container">
+
+            <div class="section__header">
+                <h2 class="section__title section__title--white">Оказываем услуги</h2>
+            </div>
+
+            <div class="portfolio">
+
+                <div class="portfolio__col">
+                    <div class="work" data-modal="#modal_project_fence">
+                        <img class="work__image" src="images/work/work-1.jpg" alt="">
+
+                        <div class="work__content">
+                            <div class="work__title">
+                                Изготовление заборов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col">
+                    <div class="work" data-modal="#modal_project_house">
+                        <img class="work__image" src="images/work/work-2.jpg" alt="">
+
+                        <div class="work__content">
+                            <div class="work__title">
+                                Строительство домов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col">
+                    <div class="work" data-modal="#modal_project_roof">
+                        <img class="work__image" src="images/work/work-5.jpg" alt="">
+
+                        <div class="work__content">
+                            <div class="work__title">
+                                Крыша
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col">
+                    <div class="work" data-modal="#modal_project_improvement">
+                        <img class="work__image" src="images/work/work-3.jpg" alt="">
+
+                        <div class="work__content">
+                            <div class="work__title">
+                                Благоустройство
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col">
+                    <div class="work" data-modal="#modal_project_decoration">
+                        <img class="work__image" src="images/work/work-4.jpg" alt="">
+
+                        <div class="work__content">
+                            <div class="work__title">
+                                Отделка и ремонт
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Benefits -->
+    <div class="section" id="benefits">
+        <div class="container">
+
+            <div class="section__header">
+                <h2 class="section__title">Наши Преимущества</h2>
+            </div>
+
+            <div class="benefits">
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-1.png" alt="">
+                    <div class="benefits__title">полный комплект услуг</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-2.png" alt="">
+                    <div class="benefits__title">контроль качества</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-3.png" alt="">
+                    <div class="benefits__title">фиксированная смета</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-4.png" alt="">
+                    <div class="benefits__title">оптимальные цены</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-5.png" alt="">
+                    <div class="benefits__title">фиксированные сроки</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-6.png" alt="">
+                    <div class="benefits__title">гарантия 5 лет</div>
+                </div>
+                <div class="benefits__item">
+                    <img class="benefits__photo" src="images/benefits/benefits-7.png" alt="">
+                    <div class="benefits__title">доставка материалов</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Request -->
+    <div class="request" id="request">
+        <div class="request__left"></div>
+        <div class="request__right">
+
+            <div class="form">
+                <form class="form__body" action="#" id="form">
+                    <div class="request__title">Оставить заявку</div>
+
+                    <input class="form__input  _req" name="input-name" type="text" placeholder="Ваше имя*...">
+                    <input class="form__input  _req" name="input-tel" type="tel" placeholder="Ваш телефон*...">
+                    <textarea class="form__textarea" name="input-text" placeholder="Ваше сообщение..."></textarea>
+                    <button class="btn" href="#">Отправить</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Map -->
+    <section class="section  section--map">
+        <div class="container">
+            <div class="map">
+                <h2 class="map__title">
+                    <div>
+                        <img class="map__icon" src="images/map.svg" alt="">
+                    </div>
+                    <a href="https://g.page/tcstolicaminsk?share" target="_blank">Открыть карту</a>
+                </h2>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="contacts">
+        <div class="container">
+
+            <div class="footer__inner">
+                <div class="footer__block">
+                    <div class="footer__head">
+                        <h4 class="footer__title">Адрес</h4>
+                    </div>
+                    <adress class="footer__adress">
+                        <div>Республика Беларусь</div>
+                        <div>г. Могилев</div>
+                        <div>ул. Челюскинцев д. 83, оф. 45</div>
+                    </adress>
+                </div>
+
+                <div class="footer__block">
+                    <div class="footer__head">
+                        <h4 class="footer__title">Поделиться</h4>
+                    </div>
+                    <div class="social  social--footer">
+                        <a class="social__item" href="#" target="_blank">
+                            <svg class="social__icon">
+                                <use xlink:href="#instagram"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer__block">
+                    <div class="footer__head">
+                        <h4 class="footer__title">ООО “Отделком”</h4>
+                        <div class="footer__subtitle">регистрационный номер 791258333 от 07.10.2020</div>
+                    </div>
+                    <div class="footer__text">
+                        <p>Мы выполняем ремонтные и отделочные работы объектов государственной и коммерческой
+                            недвижимости в Могилёве и по всей Беларуси.</p>
+                    </div>
+                </div>
+            </div><!-- /.footer__inner -->
+
+        </div><!-- /.container -->
+
+        <div class="copyright">
+            <div class="container">
+                <div class="copyright__text">
+                    <div>Copyright © 2021 ООО “ОтделКом”.</div>
+                    <div>All Rights Reserved.</div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <!-- Modals -->
+
+    <!-- Modal Fence -->
+    <div class="modal" id="modal_project_fence">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/fence.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Изготовление заборов</h3>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Разного уровня сложности из материалов завода изготовителя.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="10" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперёд
+                            <img src="images/next.svg" height="10" alt="">
+                        </button>
+                    </div>
+                </div><!-- /.modal-work__content -->
+
+            </div><!-- /.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal House -->
+    <div class="modal" id="modal_project_house">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/building.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">СТРОИТЕЛЬСТВО ДОМОВ</h3>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>От фундамента под ключ.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="10" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперёд
+                            <img src="images/next.svg" height="10" alt="">
+                        </button>
+                    </div>
+                </div><!-- /.modal-work__content -->
+
+            </div><!-- /.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal Roof -->
+    <div class="modal" id="modal_project_roof">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/roof-2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/roof-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Крыша</h3>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Мягкая, жёсткая кровля.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="10" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперёд
+                            <img src="images/next.svg" height="10" alt="">
+                        </button>
+                    </div>
+                </div><!-- /.modal-work__content -->
+
+            </div><!-- /.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal Improvement -->
+    <div class="modal" id="modal_project_improvement">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/improvement.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">БЛАГОУСТРОЙСТВО</h3>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Tротуарная плитка: дорожки, площадки.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="10" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперёд
+                            <img src="images/next.svg" height="10" alt="">
+                        </button>
+                    </div>
+                </div><!-- /.modal-work__content -->
+
+            </div><!-- /.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Modal Decoration -->
+    <div class="modal" id="modal_project_decoration">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/decoration-1.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/decoration-2.jpg" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="images/modal-works/decoration-3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-work__content">
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">ОТДЕЛКА и РЕМОНТ</h3>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Внутренние и наружные работы выполняет бригада квалифицированных специалистов: сантехник, электрик, отделочники, плиточники. Вентиляция, монтаж, демонтаж.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="10" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперёд
+                            <img src="images/next.svg" height="10" alt="">
+                        </button>
+                    </div>
+                </div><!-- /.modal-work__content -->
+
+            </div><!-- /.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- JS -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+// main: ../style.less
+
+.works {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: #805c64 url("../images/work-fon.jpg") center no-repeat;
+    background-size: cover;
+
+    @media @tablet {
+        margin-top: 0;
+        padding: 50px 0;
+    }
+
+    @media @mobile-sm {
+        padding: 30px 0;
+    }
+}
+
+.work {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 4px fade(#fff, 50%);
+
+    cursor: pointer;
+
+    transition: box-shadow .2s linear;
+
+    &:hover {
+        box-shadow: 0 0 25px fade(#fff, 50%);
+    }
+
+    @media @tablet {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+
+    @media @mobile-sm {
+        margin: 0 auto;
+    }
+}
+
+.work__image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.work__content {
+    padding: 1.5rem 1.2rem;
+}
+
+.work__title {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.8rem;
+    color: @white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @media @mobile {
+        font-size: 1.4rem;
+    }
+}
+

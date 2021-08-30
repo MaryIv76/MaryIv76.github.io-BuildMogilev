@@ -1,0 +1,70 @@
+// main: ../style.less
+
+.request {
+    display: flex;
+    margin-top: 80px;
+
+    background: url("../images/request-fon.jpg") center no-repeat;
+    background-size: cover;
+
+    @media @tablet {
+        margin-top: 0;
+    }
+
+    @media @mobile {
+        background: #ce7a63;
+    }
+}
+
+.request__left {
+    width: 50%;
+
+    @media @mobile {
+        width: 0;
+    }
+}
+
+.request__right {
+    width: 50%;
+    padding: 7rem;
+
+    @media @notebook {
+        padding: 4rem;
+    }
+
+    @media @tablet {
+        padding: 2rem;
+    }
+
+    @media @mobile {
+        width: 100%;
+    }
+}
+
+.request__title {
+    padding: 3rem 2rem 8rem;
+
+    font-size: 3.6rem;
+    color: @white;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media @notebook {
+        font-size: 3.4rem;
+    }
+
+    @media @tablet {
+        padding-bottom: 5rem;
+        font-size: 2.8rem;
+    }
+
+    @media @mobile {
+        padding-top: 0.5rem;
+        padding-bottom: 2rem;
+    }
+
+    @media @mobile-sm {
+        font-size: 2rem;
+    }
+}

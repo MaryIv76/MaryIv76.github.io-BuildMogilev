@@ -1,0 +1,74 @@
+// main: ../style.less
+
+.footer {
+    background-color: #f8f8f8;
+}
+
+.footer__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 7rem 0 4rem;
+
+    @media @tablet {
+        padding: 4rem 0 1rem;
+    }
+
+    @media @mobile {
+        padding: 3rem 0;
+    }
+
+    @media @mobile-sm {
+        padding: 2rem 0 0.5rem;
+    }
+}
+
+.footer__block {
+    width: 33.33333%;
+    padding: 0 1.5rem;
+
+    text-align: center;
+
+    @media @mobile {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 3.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer__head {
+    margin-bottom: 1rem;
+}
+
+.footer__title {
+    margin-bottom: .4rem;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: @gray;
+    text-transform: uppercase;
+}
+
+.footer__subtitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: @gray;
+    text-transform: uppercase;
+}
+
+.footer__adress {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-style: normal;
+    color: @gray-light;
+}
+
+.footer__text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: @gray-light;
+}
